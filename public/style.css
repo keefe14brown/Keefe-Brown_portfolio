@@ -1,0 +1,15 @@
+body {
+    background-image: url("https://scontent-lga3-2.xx.fbcdn.net/v/t31.0-8/16991847_10212028175642165_3496193653388624862_o.jpg?_nc_cat=106&ccb=2&_nc_sid=a9b1d2&_nc_ohc=-jkDHlR2M3kAX-euTWJ&_nc_ht=scontent-lga3-2.xx&oh=29676f30311af997935ce7fa5a814767&oe=5FF63596");
+    background-size: cover;
+    overflow: auto;
+}
+
+.openingpage {
+    text-align: center;
+    font-size: 400%;
+    color: orange;
+    margin: 0 auto;
+    border-style: solid;
+    border-color: forestgreen;
+    text-decoration: underline forestgreen;
+}

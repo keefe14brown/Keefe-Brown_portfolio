@@ -23,8 +23,15 @@ const PORT = process.env.PORT || 3000;
 // How to connect to the database either via heroku or locally
 const MONGODB_URI = process.env.MONGODB_URI;
 
+/////////// SETUP VIEW ENGINE //////////
+app.set('view engine', 'jsx');
+app.engine('jsx', require('express-react-views').createEngine());
+
 // Connect to Mongo
-mongoose.connect(MONGODB_URI ,  { useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(MONGODB_URI ,  {
+    useNewUrlParser: true, 
+    useUnifiedTopology: true
+});
 
 // Error / success
 db.on('error', (err) => console.log(err.message + ' is Mongod not running?'));
@@ -35,7 +42,7 @@ db.on('disconnected', () => console.log('mongo disconnected'));
 db.on('open' , ()=>{});
 
 //___________________
-//Middleware
+//MIDDLEWARE
 //___________________
 
 //use public folder for static assets
@@ -51,6 +58,38 @@ app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 
 //___________________
 // Routes
+//____________________
+//INDEX//
+app.get('/fruits', (req, res) => {
+  res.render('Index');
+})
+
+//NEW//
+app.get('/fruits/new', (req, res) => {
+  res.render('New');
+})
+//DELETE//
+app.delete('/fruits/:id', (req, res) => {
+
+})
+
+//UPDATE//
+app.put('/fruits/:id', (req, res) => {
+
+})
+//CREATE//
+app.post('/fruits', (req, res) => {
+
+})
+
+//EDIT//
+
+
+//SHOW//
+app.get('/fruit/:id', (req, res) => {
+  res.render('Show')
+})
+
 //___________________
 //localhost:3000 
 app.get('/' , (req, res) => {
