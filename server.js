@@ -86,8 +86,8 @@ app.post('/fruits', (req, res) => {
 
 
 //SHOW//
-app.get('/fruit/:id', (req, res) => {
-  res.render('Show')
+app.get('/fruits/:id', (req, res) => {
+  res.render('Show');
 })
 
 //___________________

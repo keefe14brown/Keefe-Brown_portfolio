@@ -4,7 +4,7 @@ class Index extends React.Component {
     render(){
         return (
             <AppLayout
-            title="Fruits Index Page"
+            title="Keefe's Portfolio"
             stylesheet="/style.css"
             js="/app.js"
             >
